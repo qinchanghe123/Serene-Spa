@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 
   <style>
     :root {
@@ -216,6 +217,13 @@
 
     .nav-link:hover {
       background: rgba(255, 255, 255, 0.14);
+    }
+
+    .nav-link.anywhere-book-now-button {
+      appearance: none;
+      -webkit-appearance: none;
+      font-family: inherit;
+      line-height: 1;
     }
 
     .nav-cta {
@@ -1231,7 +1239,7 @@
         <a class="nav-link" href="#reviews">Reviews</a>
         <a class="nav-link" href="#faqs">FAQs</a>
         <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link nav-cta" href="#booking">Book Now</a>
+        <button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="nav-link nav-cta anywhere-book-now-button" data-booking-url="https://serenespa.setmore.com" data-new-tab="false" type="button">Book now</button>
       </nav>
     </div>
   </header>
@@ -1254,7 +1262,7 @@
             quiet comfort, and professional relaxation from the moment you arrive.
           </p>
           <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary">Book Now</a>
+            <button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" class="btn btn-primary anywhere-book-now-button" data-booking-url="https://serenespa.setmore.com" data-new-tab="false" type="button">Book now</button>
             <a href="#services" class="btn btn-secondary">View Services</a>
           </div>
         </div>
@@ -1694,7 +1702,7 @@
       menuToggle.setAttribute("aria-expanded", String(open));
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
+    navLinks.querySelectorAll("a, button").forEach(link => {
       link.addEventListener("click", () => {
         body.classList.remove("menu-open");
         menuToggle.setAttribute("aria-expanded", "false");
