@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serene Spa | Massage & Relaxation in Denton, TX</title>
-  <meta name="description" content="Serene Spa in Denton, TX offers Swedish, Thai, Deep Tissue, Therapeutic, Four Hands, Chair Massage, Foot Massage, and a Luxury Facial Cleansing + Body package." />
+  <meta name="description" content="Serene Spa in Denton, TX offers Swedish, Thai, Deep Tissue, Therapeutic, Four Hands, Chair Massage, Foot Massage, a Luxury Facial Cleansing + Body package, and Korean-style Full-Body Contouring with Magicline Max." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -678,6 +678,190 @@
       font-size: 0.85rem;
       font-weight: 800;
       border: 1px solid rgba(183, 134, 75, 0.2);
+    }
+
+
+    /* Featured body-contouring equipment */
+    .equipment-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+      margin-top: 28px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(88, 64, 44, 0.12);
+      box-shadow: 0 22px 68px rgba(70, 47, 25, 0.12);
+      backdrop-filter: blur(16px);
+      scroll-margin-top: calc(var(--nav-height) + 20px);
+    }
+
+    .equipment-visual {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: clamp(34px, 4vw, 56px);
+      background:
+        radial-gradient(circle at 65% 36%, rgba(255, 255, 255, 0.86), transparent 58%),
+        linear-gradient(150deg, #e9d6ba 0%, #f6eddf 58%, #e7cfad 100%);
+      isolation: isolate;
+    }
+
+    .equipment-visual::before {
+      content: "";
+      position: absolute;
+      width: 82%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(123, 82, 41, 0.15);
+      box-shadow: 0 0 0 26px rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .equipment-tag {
+      align-self: flex-start;
+      padding: 9px 14px;
+      border-radius: 999px;
+      color: var(--gold-dark);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(123, 82, 41, 0.15);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .equipment-image {
+      width: min(300px, 100%);
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 24px;
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 24px 54px rgba(83, 58, 35, 0.18);
+    }
+
+    .equipment-caption {
+      color: var(--gold-dark);
+      text-align: center;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .equipment-caption small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .equipment-content {
+      padding: clamp(28px, 4.5vw, 60px);
+    }
+
+    .equipment-content h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.045em;
+      margin-bottom: 16px;
+    }
+
+    .equipment-intro {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .equipment-content h4 {
+      font-size: 1.04rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .equipment-benefits {
+      display: grid;
+      gap: 11px;
+      list-style: none;
+      margin-bottom: 26px;
+    }
+
+    .equipment-benefits li {
+      position: relative;
+      color: var(--muted);
+      line-height: 1.58;
+      padding-left: 22px;
+    }
+
+    .equipment-benefits li::before {
+      content: "✦";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .equipment-benefits strong {
+      color: var(--ink);
+    }
+
+    .equipment-pricing {
+      padding: 22px;
+      margin-bottom: 22px;
+      background: rgba(183, 134, 75, 0.09);
+      border: 1px solid rgba(183, 134, 75, 0.2);
+      border-radius: var(--radius-md);
+    }
+
+    .equipment-pricing h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 5px;
+    }
+
+    .equipment-pricing p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin-bottom: 15px;
+    }
+
+    .equipment-pricing .price-chip {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 1020px) {
+      .equipment-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .equipment-visual {
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .equipment-visual {
+        min-height: auto;
+        padding: 28px 22px;
+      }
+
+      .equipment-image {
+        width: min(240px, 100%);
+      }
+
+      .equipment-content {
+        padding: 26px 22px 30px;
+      }
+
+      .equipment-pricing {
+        padding: 18px;
+      }
     }
 
     .addons-panel {
@@ -1425,7 +1609,7 @@
             <div class="eyebrow">Services & Pricing</div>
             <h2 class="section-title">Choose your moment of calm.</h2>
             <p class="section-copy">
-              Explore massage, foot care, chair massage, and add-on options based strictly on Serene Spa’s listed services and pricing.
+              Explore massage, foot care, chair massage, Korean-style Full-Body Contouring with Magicline Max, and add-on options.
             </p>
           </div>
           <div class="pill-note">Prices may vary by session needs</div>
@@ -1581,6 +1765,56 @@
           </article>
         </div>
 
+
+        <!-- Magicline Max equipment + Korean-style full-body contouring pricing -->
+        <article class="equipment-feature reveal" id="magicline-max" aria-labelledby="magicline-heading">
+          <div class="equipment-visual">
+            <span class="equipment-tag">Body Contouring Equipment</span>
+            <img
+              class="equipment-image"
+              src="https://img.dingliuads.com/file/1791619454998_lQDPKIFFF4GTrF3M3MzcsCxdhP8ORMQYCppsy3RaBAA_220_220.jpg"
+              alt="Magicline Max body-contouring equipment"
+              width="220"
+              height="220"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="equipment-caption">
+              Magicline Max
+              <small>RF · Vacuum Massage · Electrical Stimulation</small>
+            </div>
+          </div>
+
+          <div class="equipment-content">
+            <div class="eyebrow">Featured Equipment</div>
+            <h3 id="magicline-heading">Magicline Max</h3>
+            <p class="equipment-intro">
+              Discover our Korean-style full-body contouring option with the Magicline Max device.
+            </p>
+            <h4>Use for:</h4>
+            <ul class="equipment-benefits">
+              <li><strong>Cellulite Reduction:</strong> Helps improve the appearance of uneven skin.</li>
+              <li><strong>Skin Tightening:</strong> RF energy helps improve skin firmness and elasticity.</li>
+              <li><strong>Body Contouring:</strong> Helps improve body shape and skin texture.</li>
+              <li><strong>Circulation Support:</strong> Vacuum massage helps stimulate local circulation.</li>
+              <li><strong>Muscle Stimulation:</strong> Electrical energy may help stimulate muscles, depending on the treatment mode.</li>
+            </ul>
+
+            <div class="equipment-pricing" aria-label="Korean-style full-body contouring prices">
+              <h4>Korean-style Full-Body Contouring</h4>
+              <p>Session Pricing</p>
+              <div class="price-list">
+                <span class="price-chip">60 min · $100</span>
+                <span class="price-chip">75 min · $130</span>
+                <span class="price-chip">90 min · $160</span>
+                <span class="price-chip">120 min · $200</span>
+              </div>
+            </div>
+
+            <a href="tel:9409997067" class="btn btn-primary">Call to Book Contouring</a>
+          </div>
+        </article>
+
         <div class="addons-panel reveal">
           <div class="pricing-box">
             <h3>Complimentary Add-Ons</h3>
@@ -1652,7 +1886,7 @@
             <div class="eyebrow" style="color:#f0c891;">Booking</div>
             <h2>Ready to feel restored?</h2>
             <p>
-              Call Serene Spa to book your preferred massage, foot massage, chair massage, luxury package, or add-on service.
+              Call Serene Spa to book your preferred massage, foot massage, chair massage, luxury package, Korean-style full-body contouring, or add-on service.
             </p>
             <a href="tel:9409997067" class="btn btn-primary">Call 940-999-7067</a>
           </div>
@@ -1776,7 +2010,7 @@
             <div class="eyebrow" style="color:#f0c891;">Contact & Location</div>
             <h2>Visit Serene Spa.</h2>
             <p style="color:rgba(255,255,255,.82); line-height:1.75;">
-              Find us in Denton for massage, foot massage, chair massage, luxury package sessions, and add-on treatments.
+              Find us in Denton for massage, foot massage, chair massage, luxury packages, Korean-style full-body contouring, and add-on treatments.
             </p>
 
             <div class="contact-list">
